@@ -1,4 +1,4 @@
-# social-media-tracker
+# astro-tracker
 ### A tool for tracking frequency of social media topics, or anything else.
 
 This tool was designed to allow users to see at a glance what topics/items have not been posted about on social media recently. It can easily be adapted for other uses.
@@ -13,7 +13,6 @@ This tool was designed to allow users to see at a glance what topics/items have 
 
 ####Planned Additional Features
 * Authentication required for admin page
-* Specify site name 
 * Add/delete multiple item categories
 * Specify threshold for item decay 
 * ??? Feature/Pull requests welcome!

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <meta charset='utf-8'>
+-->
+    <title>Astro Social Media Topic Tracker</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Astro Social Media Topic Tracker</h1>
+
+    <h3>Products</h3>
+    {% if products %}
+    <section>
+        {% for i in products %}
+        <div class="
+            {% if i.age >= 20 or i.clicks == 0 %}
+            black
+            {% elif i.age >= 15 %}
+            red
+            {% elif i.age >=10 %}
+            yellow
+            {% else %}
+            green
+            {% endif %}
+            ">
+            <div>
+            <form action="/" method="POST">
+                <input type="hidden" name="key" value="{{ i.key }}">
+                <input type="hidden" name="action" value="click">
+                <button type="submit">{{ i.name|e }}</button>
+            </form>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>No products in database</p>
+    {% endif %}
+
+
+</body>
+
+</html>
+

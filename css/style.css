@@ -1,0 +1,23 @@
+div {
+    width: 25%;
+    margin: 1em;
+    border: 1px solid #000;
+    float: left;
+}
+
+div div {
+    width: 75%;
+    margin: 1em auto;
+    display: block;
+}
+
+button {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.black {background: black;}
+.green {background: green;}
+.red {background: red;}
+.yellow {background: yellow;}

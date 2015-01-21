@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <meta charset='utf-8'>
+-->
+    <title>Astro Social Media Topic Tracker - ADMIN</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Astro Social Media Topic Tracker - ADMIN</h1>
+
+    <form action="/admin" method="POST">
+    <fieldset>
+    <legend>Add Astro product to tracking database:</legend>
+        <input type="hidden" name="action" value="add"></input>
+        <dl>
+            <dt>Name:</dt>
+                <dd><input type="text" name="name" required></dd>
+        </dl>
+        <input type="submit">
+        </fieldset>
+    </form>
+
+    {% if message %}
+    <section>
+        {% for i in message %}
+        <p>{{ i|e }} </p>
+        {% endfor %}
+    </section>
+    {% endif %}
+    
+    <hr>
+    <h3>Existing Products</h3>
+    {% if products %}
+    <section>
+        {% for i in products %}
+        <div class="charlist">
+            <p>{{ i.name|e }}</p>
+
+            <form action="/admin" method="POST">
+                <input type="hidden" name="key" value="{{ i.key }}">
+                <input type="hidden" name="action" value="delete">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>No existing products</p>
+    {% endif %}
+
+
+</body>
+
+</html>
+
