@@ -32,7 +32,7 @@ class MainHandler(template_wrangler.TemplateHandler):
 		self.template_variables['products'] = [{
 			'key'       : x.key.urlsafe(),
 			'clicks'	: x.clicks,
-			'age'      : (datetime.datetime.utcnow() - x.date).days,
+			'age'      : (datetime.datetime.utcnow() - x.date).seconds,
 			'name'      : x.name
 		} for x in db_defs.Product.query().order(db_defs.Product.date).fetch()]
 		template_wrangler.TemplateHandler.render(self, page, self.template_variables)

@@ -10,10 +10,12 @@ This tool was designed to allow users to see at a glance what topics/items have 
   * Items turn red if not clicked for 15 days
   * Items turn black if not clicked for 20 days
 
+See demo at [this link](http://smt-demo.appspot.com/).
 
 ####Planned Additional Features
 * Authentication required for admin page
 * Specify site name 
 * Add/delete multiple item categories
 * Specify threshold for item decay 
+* Make it pretty
 * ??? Feature/Pull requests welcome!

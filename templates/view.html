@@ -3,15 +3,22 @@
 <head>
 <!--    <meta charset='utf-8'>
 -->
-    <title>Astro Social Media Topic Tracker</title>
+    <title>Social Media Topic Tracker</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Astro Social Media Topic Tracker</h1>
+    <h1>Social Media Topic Tracker</h1>
 
-    <h3>Products</h3>
+    <h3>Topics</h3>
     {% if products %}
     <section>
+	<p>Decay threshold is in seconds for demo purposes. Items turn Green when clicked, then turn:
+	<ul>
+	<li>Yellow after 10 seconds</li>
+	<li>Red after 15 seconds</li>
+	<li>Black after 20 seconds</li>
+	</ul>
+
         {% for i in products %}
         <div class="
             {% if i.age >= 20 or i.clicks == 0 %}
@@ -34,7 +41,7 @@
         </div>
         {% endfor %}
     {% else %}
-    <p>No products in database</p>
+    <p>No topics in database</p>
     {% endif %}
 
 
