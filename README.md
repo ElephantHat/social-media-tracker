@@ -16,6 +16,8 @@ See demo at [this link](http://smt-demo.appspot.com/).
 * Authentication required for admin page
 * Specify site name 
 * Add/delete multiple item categories
+* Choose item sort method (currently displays "oldest" item first)
 * Specify threshold for item decay 
+* Live item decay (currently must refresh to see item decay)
 * Make it pretty
 * ??? Feature/Pull requests welcome!
